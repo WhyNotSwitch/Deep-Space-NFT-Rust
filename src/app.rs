@@ -102,7 +102,7 @@ impl Component for App {
         html! {
             <div class="font-sans wrapper flex justify-center content-center flex-wrap w-full h-screen bg-gray-900">
                 <div class="w-10/12 md:w-2/4 lg:w-1/4">
-                    <h1 class="text-center text-3xl font-semibold mb-3 text-gray-700">{ "Visual Hashing" }</h1>
+                    <h1 class="text-center text-3xl font-semibold mb-3 text-gray-700">{ "Visit The Stars" }</h1>
                     <section class="content w-full">
                         <form onsubmit=self.link.callback(|e: Event| Msg::RenderCanvas(e))>
                             <input
@@ -114,20 +114,6 @@ impl Component for App {
                         </form>
                         <canvas id="canvas" ref={self.canvas_ref.clone()} class="spin w-full"/>
                     </section>
-                    <footer class="info text-center text-gray-600 mt-3">
-                        <p>
-                            { "Written by " }
-                            <a href="https://github.com/emsifa/visual-hashing-yew" target="_blank" class="text-teal-600 font-semibold">{ "Muhammad Syifa" }</a>
-                        </p>
-                        <p class="text-sm">
-                            { "As implementation of " }
-                            <a href="https://yew.rs" target="_blank" class="text-teal-600 font-semibold">{ "Yew (WASM)" }</a>
-                            {" version of " }
-                            <a href="https://github.com/gungunfebrianza/Visual-Hashing" target="_blank" class="text-teal-600 font-semibold">{ "Visual Hashing" }</a>
-                            { " by " }
-                            <a href="https://github.com/gungunfebrianza" target="_blank" class="text-teal-600 font-semibold">{ "Gun Gun Febrianza" }</a>
-                        </p>
-                    </footer>
                 </div>
             </div>
         }
